@@ -1,6 +1,6 @@
 // src/pages/PlasticSurgery.tsx
 import React from 'react';
-// import surgeonImg from "../../images/surgeon.jpg"; // placeholder image path
+import krishna from "../../images/Dr. KRISHNAPRASAD SHETTY.png"; // placeholder image path
 
 const PlasticSurgery = () => {
   return (
@@ -87,21 +87,21 @@ const PlasticSurgery = () => {
       </section>
 
       {/* Doctors Section (Image not changed) */}
-      {/* <section className="bg-white p-6 rounded-lg shadow-sm">
+      <section className="bg-white p-6 rounded-lg shadow-sm">
         <h2 className="text-3xl font-semibold text-blue-600 mb-5 border-b border-blue-200 pb-2 text-center">
           Our Doctors
         </h2>
         <div className="flex justify-center items-center">
           <div className="text-center bg-white p-4 rounded-lg shadow-md w-60">
             <img
-              src={surgeonImg}
+              src={krishna}
               alt="Plastic Surgery Specialist"
               className="mx-auto w-40 h-40 rounded-full object-cover"
             />
-            <h3 className="text-xxx font-bold text-blue-800 mt-4">Dr. [Name]</h3>
+            <h3 className="text-xxx font-bold text-blue-800 mt-4">Dr. Krishnaprasad Shetty</h3>
           </div>
         </div>
-      </section> */}
+      </section>
 
     </div>
   );
