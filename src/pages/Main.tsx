@@ -149,22 +149,23 @@ const ImageSlider = () => {
   </div>
 
   {/* Trust Indicators */}
-  <div className="absolute bottom-20 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl hidden lg:block font-serif">
-    <div className="grid grid-cols-3 gap-6 text-center">
-      <div>
-        <div className="text-2xl font-bold text-black mb-1">40</div>
-        <div className="text-xs text-gray-800">Years Experience</div>
-      </div>
-      <div>
-        <div className="text-2xl font-bold text-black mb-1">100K+</div>
-        <div className="text-xs text-gray-800">Patients Treated</div>
-      </div>
-      <div>
-        <div className="text-2xl font-bold text-black mb-1">24/7</div>
-        <div className="text-xs text-gray-800">Emergency Care</div>
-      </div>
+  <div className="absolute top-20 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl hidden lg:block font-serif">
+  <div className="grid grid-cols-3 gap-6 text-center">
+    <div>
+      <div className="text-2xl font-bold text-black mb-1">40</div>
+      <div className="text-xs text-gray-800">Years Experience</div>
+    </div>
+    <div>
+      <div className="text-2xl font-bold text-black mb-1">100K+</div>
+      <div className="text-xs text-gray-800">Patients Treated</div>
+    </div>
+    <div>
+      <div className="text-2xl font-bold text-black mb-1">24/7</div>
+      <div className="text-xs text-gray-800">Emergency Care</div>
     </div>
   </div>
+</div>
+
 </section>
 
   );
@@ -326,10 +327,19 @@ const Messages = () => (
         </div>
       </div>
       <div>
-        <blockquote className="text-2xl lg:text-3xl font-serif italic text-gray-800 leading-relaxed mb-8 relative pl-12">
-          <MessageSquare className="absolute left-0 top-0 text-blue-400" size={48} />
-          "At Alva's Health Centre, we believe in a holistic approach to healthcare, where advanced medical science meets genuine human compassion. Our mission is to not only treat illnesses but to foster a community of wellness, ensuring every patient receives personalized, world-class care. We are constantly striving for excellence, investing in the latest technology and nurturing a team of dedicated professionals who share our vision for a healthier future."
-        </blockquote>
+        <blockquote
+  className="text-2xl lg:text-3xl font-serif italic text-gray-800 leading-relaxed mb-8 relative pl-12"
+  style={{ textAlign: "justify", textJustify: "inter-word" }}
+>
+  <MessageSquare className="absolute left-0 top-0 text-blue-400" size={48} />
+  "At Alva's Health Centre, we believe in a holistic approach to healthcare, where advanced 
+  medical science meets genuine human compassion. Our mission is to not only treat illnesses 
+  but to foster a community of wellness, ensuring every patient receives personalized, 
+  world-class care. We are constantly striving for excellence, investing in the latest 
+  technology and nurturing a team of dedicated professionals who share our vision for a 
+  healthier future."
+</blockquote>
+
         <p className="text-lg text-gray-700 mb-8">
           — Dr. Mohan Alva, Chairman, AEF
         </p>
@@ -351,23 +361,110 @@ const QuickLinks = () => (
       <p className="text-gray-600">Easy access to our most popular services and information</p>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
-      <a href="/doctor" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group text-center">
-        <Users className="mx-auto mb-4 text-blue-600 group-hover:scale-110 transition-transform" size={48} />
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Our Doctors</h3>
-        <p className="text-gray-600 text-sm">Meet our expert medical team</p>
-      </a>
-      
-      <a href="/services" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group text-center">
-        <Heart className="mx-auto mb-4 text-red-500 group-hover:scale-110 transition-transform" size={48} />
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Our Services</h3>
-        <p className="text-gray-600 text-sm">Comprehensive medical care</p>
-      </a>
-    </div>
+    
+    <div className="grid place-items-center justify-center">
+  <a
+    href="/services"
+    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group text-center"
+  >
+    <Heart
+      className="mx-auto mb-4 text-red-500 group-hover:scale-110 transition-transform"
+      size={48}
+    />
+    <h3 className="text-xl font-bold text-gray-900 mb-2">Our Services</h3>
+    <p className="text-gray-600 text-sm">Comprehensive medical care</p>
+  </a>
+</div>
+
+
   </Section>
 );
 
+/* -------------------------------------------------------
+   FLOATING BLOOD DONATION TINY CARD (UPDATED)
+------------------------------------------------------- */
+/* -------------------------------------------------------
+   FLOATING BLOOD DONATION TINY CARD (NEW)
+------------------------------------------------------- */
+const FloatingBloodCard = () => {
+  const [activeTab, setActiveTab] = useState("greet");
 
+  return (
+    <div className="fixed bottom-24 right-6 z-50 w-64 bg-white shadow-xl rounded-xl border overflow-hidden">
+
+      <div className="flex">
+        <button
+          onClick={() => setActiveTab("greet")}
+          className={`flex-1 py-2 text-sm font-semibold ${
+            activeTab === "greet" ? "bg-red-500 text-white" : "bg-gray-100 text-gray-700"
+          }`}
+        >
+          Greetings
+        </button>
+
+        <button
+          onClick={() => setActiveTab("donate")}
+          className={`flex-1 py-2 text-sm font-semibold ${
+            activeTab === "donate" ? "bg-green-600 text-white" : "bg-gray-100 text-gray-700"
+          }`}
+        >
+          Donate
+        </button>
+      </div>
+
+      <div className="p-4 text-sm text-gray-700 leading-relaxed">
+        {activeTab === "greet" && (
+          <p>
+            ❤️ Thank you to our brave <b>Blood Donors!</b><br />
+            Your kindness saves precious lives daily.
+          </p>
+        )}
+
+        {activeTab === "donate" && (
+          <div className="text-center">
+            <p className="mb-3">
+              Want to donate blood?<br />Contact us on WhatsApp.
+            </p>
+
+            <a
+              href="https://wa.me/919876543210?text=Hello%2C%20I%20want%20to%20donate%20blood."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm shadow hover:bg-green-700 inline-block"
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        )}
+      </div>
+
+    </div>
+  );
+};
+
+/* -------------------------------------------------------
+   FLOATING WHATSAPP BUTTON
+------------------------------------------------------- */
+const FloatingWhatsapp = () => (
+  <a
+    href="https://wa.me/919876543210"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12 0a12 12 0 0 0-10.4 17.94L0 24l6.27-1.64A12 12 0 1 0 20.52 3.48Zm-8.52 19a9.94 
+      9.94 0 0 1-5.09-1.39l-.36-.2-3.72.96 1-3.62-.24-.37A10 10 0 1 1 12 22Zm5.15-7.38c-.28-.14-1.65-.81-1.91-.9s-.44-.14-.63.14-.72.9-.88 
+      1.08-.33.21-.61.07a8.32 8.32 0 0 1-2.45-1.51 9.17 9.17 0 0 1-1.7-2.11c-.18-.31 0-.48.14-.62l.47-.53a2 2 0 0 0 .31-.52.56.56 
+      0 0 0-.03-.53l-.86-2.07c-.23-.56-.46-.48-.63-.49h-.53a1 1 0 0 0-.73.34A3.09 3.09 0 0 0 6 9.09a5.39 5.39 0 0 0 .14 
+      2.23A12.06 12.06 0 0 0 9.23 16a11.26 11.26 0 0 0 5.45 3.06 4.68 4.68 0 0 0 2.82-.18A2.34 2.34 0 0 0 19 17.2c.14-.31.14-.58.1-.63s-.23-.2-.5-.34Z" />
+    </svg>
+  </a>
+);
+
+/* -------------------------------------------------------
+   MAIN APP
+------------------------------------------------------- */
 const App = () => {
   return (
     <>
@@ -376,8 +473,15 @@ const App = () => {
       <About />
       <Messages />
       <QuickLinks />
+
+      {/* Floating tiny card */}
+      <FloatingBloodCard />
+
+      {/* Floating WhatsApp icon */}
+      <FloatingWhatsapp />
     </>
   );
 };
 
 export default App;
+

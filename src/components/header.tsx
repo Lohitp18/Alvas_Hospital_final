@@ -64,27 +64,39 @@ const Header: React.FC = () => {
     {
       name: 'Services',
       submenu: [
-        { name: 'EMERGENCY & TRAUMA CARE', href: '/emergencyandtraumacare' },
-        { name: 'PHARMACY', href: 'parmacy' },
-        { name: 'LABORATORY', href: '/laboratory' },
-        { name: 'ECG / XRAY / CT SCAN', href: '/ecg' },
-        { name: 'OT AND LT SERVICES', href: '/otandlt' },
-        { name: 'DIALYSIS', href: '/dailysis' },
-        { name: 'BLOOD BANK', href: '/bloodbank' },
-        { name: 'NICU / ICU WITH VENTILATOR', href: '/nicu' },
-        { name: 'ENDOSCOPY', href: '/endoscopy' },
-        { name: 'AMBULANCE SERVICES', href: '/emergency' },
-        { name: 'PARKING SERVICES', href: '/parkingservices' },
-        { name: 'MORTUARY', href: '/mortuary' },
-        { name: 'ULTRASOUND SCANNING', href: '/ultrasoundscanning' },
-        { name: 'HEALTH CARD', href: '/healthcard' },
-        { name: 'HEALTH PACKAGES', href: '/healthpackage' },
-        { name: 'HEALTH INSURANCES', href: '/healthinsurance' },
-        { name: "ALVA'S FITNESS ZONE", href: '/alvasfitnesszone' },
-        { name: 'HOME VISIT', href: '/homevisit' },
-
-        { name: 'ATM SERVICES', href: '/emergency' },
-        { name: 'CAFETERIA', href: '/cafeteria' },
+        {
+          groupName: 'Services',
+          items: [
+            { name: 'EMERGENCY & TRAUMA CARE', href: '/emergencyandtraumacare' },
+            { name: 'PHARMACY', href: 'parmacy' },
+            { name: 'LABORATORY', href: '/laboratory' },
+            { name: 'ECG ', href: '/ecg' },
+            { name: 'XRAY / CT SCAN / MRI', href: '/ecg'},
+            { name: 'OT AND LT SERVICES', href: '/otandlt' },
+            { name: 'DIALYSIS', href: '/dailysis' },
+            { name: 'BLOOD BANK', href: '/bloodbank' },
+            { name: 'NICU ', href: '/nicu' },
+            {name: 'ICU WITH VENTILATOR', href:'/nicu'},
+            { name: 'ENDOSCOPY', href: '/endoscopy' },
+            //  { name: 'PARKING SERVICES', href: '/parkingservices' },
+            { name: 'MORTUARY', href: '/mortuary' },
+            { name: 'ULTRASOUND SCANNING', href: '/ultrasoundscanning' },
+            { name: 'HEALTH CARD', href: '/healthcard' },
+            { name: 'HEALTH PACKAGES', href: '/healthpackage' },
+            // { name: "ALVA'S FITNESS ZONE", href: '/alvasfitnesszone' },
+          ],
+        },
+        {
+          groupName: 'Facilities',
+          items: [
+            { name: 'CAFETERIA', href: '/cafeteria' },
+            { name: 'HOME VISIT', href: '/homevisit' },
+            { name: 'HEALTH INSURANCES', href: '/healthinsurance' },
+            { name: 'AMBULANCE SERVICES', href: '/emergency' },
+            { name: 'LABORATORY', href: '/laboratory' },
+            { name: 'ATM SERVICES', href: '/emergency' },
+          ],
+        },
       ],
     },
     {
@@ -94,7 +106,7 @@ const Header: React.FC = () => {
         { name: 'Alvas Punar Janma', href: '/punarjanma' },
       ],
     },
-    { name: 'Doctors', href: '/doctor' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Medical College', href: '/medicalcollege' },
     { name: 'Contact Us', href: '/contactus' },
   ];
@@ -142,20 +154,45 @@ const Header: React.FC = () => {
                     <ChevronDown size={16} className="ml-1 transition-transform group-hover:rotate-180" />
                   </button>
                   {/* Normal submenu */}
-                  <div
-                    className={`absolute top-full left-0 mt-3 bg-gradient-to-b from-white to-gray-50 shadow-xl rounded-xl py-4 px-6 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 invisible group-hover:visible transition-all duration-300 z-50 border border-gray-200
-                      ${item.name === 'Services' ? 'grid grid-cols-2 gap-4 min-w-[500px]' : 'min-w-[260px]'}`}
-                  >
-                    {item.submenu.map((sub) => (
-                      <a
-                        key={sub.name}
-                        href={sub.href}
-                        className="block px-3 py-2 text-[15px] font-medium text-gray-700 hover:bg-blue-600 hover:text-white rounded-md transition-all duration-200"
-                      >
-                        {sub.name}
-                      </a>
-                    ))}
-                  </div>
+                  {item.name === 'Services' ? (
+                    <div
+                      className="absolute top-full left-0 mt-3 bg-gradient-to-b from-white to-gray-50 shadow-xl rounded-xl py-4 px-6 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 invisible group-hover:visible transition-all duration-300 z-50 border border-gray-200 min-w-[600px] grid grid-cols-2 gap-6"
+                    >
+                      {item.submenu.map((group) => (
+                        <div key={group.groupName}>
+                          <h3 className="text-white bg-blue-700 text-center font-bold text-[15px] uppercase tracking-wide py-2 rounded-md mb-3">
+                            {group.groupName}
+                          </h3>
+                          <ul className="space-y-2">
+                            {group.items.map((link) => (
+                              <li key={link.name}>
+                                <a
+                                  href={link.href}
+                                  className="block text-[15px] font-medium text-gray-700 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md transition-all duration-200"
+                                >
+                                  {link.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div
+                      className="absolute top-full left-0 mt-3 bg-gradient-to-b from-white to-gray-50 shadow-xl rounded-xl py-4 px-6 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 invisible group-hover:visible transition-all duration-300 z-50 border border-gray-200 min-w-[260px]"
+                    >
+                      {item.submenu.map((sub) => (
+                        <a
+                          key={sub.name}
+                          href={sub.href}
+                          className="block px-3 py-2 text-[15px] font-medium text-gray-700 hover:bg-blue-600 hover:text-white rounded-md transition-all duration-200"
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <a
@@ -215,19 +252,38 @@ const Header: React.FC = () => {
                     (item.name === 'Our Units' && isUnitsOpen) ||
                     (item.name === 'Services' && isServicesOpen)) && (
                     <div
-                      className={`ml-4 border-l border-gray-200 pl-4 py-1
-                        ${item.name === 'Services' ? 'grid grid-cols-2 gap-2' : 'space-y-1'}`}
+                      className={`ml-4 border-l border-gray-200 pl-4 py-1 ${
+                        item.name === 'Services' ? 'grid grid-cols-2 gap-4' : 'space-y-1'
+                      }`}
                     >
-                      {(item.submenu || item.megaMenu?.flatMap((m) => m.links)).map((sub: any) => (
-                        <a
-                          key={sub.name}
-                          href={sub.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className="block text-[15px] font-medium text-gray-700 py-2 hover:bg-blue-600 hover:text-white rounded-md transition-all"
-                        >
-                          {sub.name}
-                        </a>
-                      ))}
+                      {item.name === 'Services'
+                        ? item.submenu.map((group: any) => (
+                            <div key={group.groupName}>
+                              <h4 className="font-semibold mb-2 text-gray-800">{group.groupName}</h4>
+                              <div className="flex flex-col space-y-1">
+                                {group.items.map((sub: any) => (
+                                  <a
+                                    key={sub.name}
+                                    href={sub.href}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="block text-[15px] font-medium text-gray-700 py-2 hover:bg-blue-600 hover:text-white rounded-md transition-all"
+                                  >
+                                    {sub.name}
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          ))
+                        : (item.submenu || item.megaMenu?.flatMap((m) => m.links)).map((sub: any) => (
+                            <a
+                              key={sub.name}
+                              href={sub.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block text-[15px] font-medium text-gray-700 py-2 hover:bg-blue-600 hover:text-white rounded-md transition-all"
+                            >
+                              {sub.name}
+                            </a>
+                          ))}
                     </div>
                   )}
                 </div>
