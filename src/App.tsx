@@ -40,10 +40,11 @@ import ContactPage30 from './pages/medicine/Paediatrics';
 import ContactPage31 from './pages/medicine/PainPalliativeCare';
 import ContactPage32 from './pages/medicine/Psychiatry';
 import ContactPage33 from './pages/medicine/Radiology';
-import ContactPage34 from  './pages/medicine/Historyofmedicine';
+// import ContactPage34 from  './pages/medicine/Historyofmedicine';
 import ContactPage35 from   './pages/medicine/Plasticsurgery';
 import ContactPage36 from   './pages/medicine/Pulmonology';
 import ContactPage37 from   './pages/medicine/Anesthesiology';
+
 
 
 import Pharmacy from './pages/parmacy';
@@ -65,7 +66,8 @@ import Cafeteria from './pages/cafeteria';
 import Dailysis from './pages/dailysis';
 import Alvasfitnesszone from './pages/alvasfitnesszone';
 import Service from './pages/Services';
-
+import Ambulance from './pages/ambulanceservices';
+import Atm from './pages/atmservices';
 
 
 
@@ -125,7 +127,7 @@ function App() {
               <Route path="/pain" element={<ContactPage31 />} />
               <Route path="/psychitary" element={<ContactPage32 />} />
               <Route path="/radio" element={<ContactPage33 />} />
-              <Route path="/historyofmedicine" element={<ContactPage34/>} />
+              {/* <Route path="/historyofmedicine" element={<ContactPage34/>} /> */}
               <Route path="/plasticsurgery" element={<ContactPage35 />} />
                <Route path="/pulmonology" element={<ContactPage36 />} />
               <Route path="/anesthesiology" element={<ContactPage37 />} />
@@ -147,16 +149,16 @@ function App() {
               <Route path="/bloodbank" element={<Bloodbank/>} />
               <Route path="/nicu" element={<NICU/>} />
               <Route path="/endoscopy" element={<Endoscopy/>} />
-              {/* <Route path="/ambulanceservices" element={<Ambulanceservices/>} /> */}
+              <Route path="/ambulanceservices" element={<Ambulance/>} />
               <Route path="/parkingservices" element={<Parkingservices/>} /> 
               <Route path="/mortuary" element={<Mortuary/>} /> 
-               <Route path="/ultrasoundscanning" element={<Ultrasoundscanning/>} />
+              <Route path="/ultrasoundscanning" element={<Ultrasoundscanning/>} />
               <Route path="/healthcard" element={<Healthcard/>} />
               <Route path="/healthpackage" element={<Healthpackage/>} />
               <Route path="/healthinsurance" element={<Healthinsurance/>} />
               <Route path="/alvasfitnesszone" element={<Alvasfitnesszone/>} />
               <Route path="/homevisit" element={<HomeVisit/>} />
-              {/* <Route path="/atmservices" element={<Atmservices/>} /> */}
+              <Route path="/atmservices" element={<Atm/>} />
               <Route path="/cafeteria" element={<Cafeteria/>} />
 
             </Routes>

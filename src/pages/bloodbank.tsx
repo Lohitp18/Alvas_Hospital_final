@@ -1,9 +1,9 @@
 import React from 'react';
 
 // Example images - replace these with your actual image paths
-import BloodBankImg1 from '../images/blood1.jpg';
-import BloodBankImg2 from '../images/blood2.jpg';
-import BloodBankImg3 from '../images/blood3.jpg';
+import BloodBankImg1 from '../images/bloodbank.jpeg';
+import BloodBankImg2 from '../images/bloodbank2.jpeg';
+import BloodBankImg3 from '../images/bloodbank3.jpeg';
 
 const images = [
   { src: BloodBankImg1,  },
@@ -51,6 +51,7 @@ const BloodBank = () => {
           <li>Emergency Blood Supply</li>
           <li>Donor Registration & Counseling</li>
           <li>Voluntary Blood Donation Camps</li>
+          <li>Phone No: +91 7022088557</li>
         </ul>
 
         {/* Image Section */}

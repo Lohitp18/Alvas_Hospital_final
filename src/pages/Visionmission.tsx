@@ -31,8 +31,9 @@ const HospitalVisionMission = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Our Vision</h2>
               </div>
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
-                Delivering the safe and highest quality of care to the patient for better & healthier life.
-              </p>
+              At Alva's Health , we aim to raise the benchmark for healthcare in India . By integrating cutting-edge
+technologies with compassionate care, we are dedicated to setting new standards of excellence in the
+medical field.              </p>
             </div>
           </div>
         </div>
@@ -47,11 +48,11 @@ const HospitalVisionMission = () => {
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Our Mission</h2>
               </div>
-              <ul className="list-disc list-inside text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8 space-y-2">
-                <li>Promote health and reduce illness</li>
-                <li>Providing quality of service & cost effective healthcare</li>
-                <li>We take responsibility to ensuring that sustainable, patient centered and high quality healthcare is provided at all time</li>
-              </ul>
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
+              We embrace our patients as family, offering unwavering care through every moment. Our tireless
+efforts ensure that each patient is given an equal opportunity for a fresh start, fostering an
+environment of trust and healing.
+              </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">

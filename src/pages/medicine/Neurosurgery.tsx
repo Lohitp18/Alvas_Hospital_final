@@ -1,48 +1,69 @@
 // src/pages/Neurosurgery.tsx
 import React from "react";
+import doctorImage from  "../../images/dr sattar.jpg"
 
 const Neurosurgery = () => {
   return (
-    <div className="p-8 max-w-5xl mx-auto bg-gray-50 rounded-lg shadow-md space-y-10 font-serif">
-
-      <h1 className="bg-blue-900 text-white text-4xl font-extrabold px-4 py-2 mb-6 block w-full">
+    <div className="p-6 max-w-5xl mx-auto">
+      {/* Main Heading */}
+      <h1 className="text-3xl font-bold text-blue-700 mb-4">
         NEUROSURGERY
       </h1>
 
-      {/* Overview Section */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <p className="text-gray-800 text-lg leading-relaxed tracking-wide">
-          The Neurosurgery Department at Alva’s Health Centre offers advanced surgical care for disorders 
-          of the brain, spine, and nervous system. Our team of skilled neurosurgeons uses modern techniques 
-          and state-of-the-art facilities to provide safe and effective treatment.
-        </p>
-      </section>
+      {/* Introduction Paragraph */}
+      <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
+        The Neurosurgery Department specializes in the surgical treatment of disorders affecting the nervous system, 
+        including the brain, spine, and peripheral nerves. Our skilled neurosurgeons handle complex procedures for 
+        conditions such as brain tumors, spinal cord injuries, and nerve disorders. Using advanced imaging and 
+        surgical techniques, we ensure precise interventions and optimal outcomes. Committed to comprehensive care, 
+        our Neurosurgery team focuses on both surgical and rehabilitative aspects to enhance patient recovery and quality of life.
+      </p>
 
-      {/* Services Section */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">
-          Services Offered
+      <section className="bg-blue-50 p-6 rounded-lg shadow-lg mb-8 max-w-sm mx-auto border border-blue-200">
+  <h2 className="text-xl font-semibold text-blue-700 mb-3 border-b border-blue-200 pb-1 text-center">
+    BRAIN & SPINE
+  </h2>
+
+  <h3 className="text-lg font-semibold text-blue-600 mb-2 text-center">
+    Our Services
+  </h3>
+
+  <ul className="list-disc list-inside space-y-1 text-gray-700">
+    <li>TRAUMA – Traumatic Brain & Spine Injuries</li>
+    <li>Cervical and Lumbar Disc Problems</li>
+    <li>Neck Pain</li>
+    <li>Back Pain</li>
+    <li>Congenital Brain Spine Anomalies</li>
+    <li>Brain & Spine Tumours</li>
+    <li>Hydrocephalus </li>
+    <li>Minimally Invasive Spine Surgery</li>
+    <li>Brain Abscess</li>
+    <li>Headache  </li>
+    <li>Stroke </li>
+    <li>Epilepsy </li>
+  </ul>
+</section>
+
+
+     {/* Doctors Section */}
+     <section className="bg-white p-6 rounded-lg shadow-sm">
+        <h2 className="text-3xl font-semibold text-blue-600 mb-5 border-b border-blue-200 pb-2 text-center">
+          Our Doctors
         </h2>
 
-        <ul className="list-disc list-inside ml-6 space-y-3 text-gray-700 leading-relaxed tracking-wide">
-
-          <li>Brain surgeries for tumors, trauma, aneurysms, and congenital conditions</li>
-          <li>Spine surgeries for disc problems, spinal cord injuries, and deformities</li>
-          <li>Surgical management of head injuries and neurological emergencies</li>
-          <li>Treatment of nerve-related disorders such as trigeminal neuralgia and peripheral nerve injuries</li>
-          <li>Minimally invasive neurosurgical procedures for faster recovery</li>
-
-        </ul>
+        <div className="flex justify-center gap-6 items-center flex-wrap">
+          <div className="text-center bg-white p-4 rounded-lg shadow-md w-60">
+            <img
+              src={doctorImage}
+              alt="Dr. Sattar Khan"
+              className="mx-auto w-40 h-40 rounded-full object-cover"
+            />
+            <h3 className="text-xl font-bold text-blue-800 mt-4">
+              Dr. Sattar Khan
+            </h3>
+          </div>
+        </div>
       </section>
-
-      {/* Closing Note */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <p className="text-gray-800 text-lg leading-relaxed tracking-wide">
-          With a strong focus on precision, patient safety, and faster rehabilitation, the Neurosurgery 
-          Department ensures comprehensive care for both emergency and planned neurosurgical needs.
-        </p>
-      </section>
-
     </div>
   );
 };

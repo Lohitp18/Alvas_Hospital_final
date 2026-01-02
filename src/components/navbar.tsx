@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Only show when at the very top
       if (window.scrollY <= 0) {
         setShowNavbar(true);
       } else {
@@ -40,7 +39,7 @@ const Navbar: React.FC = () => {
               <span>ISO 9001:2015 Certified</span>
             </div>
             <div className="hidden sm:flex items-center space-x-2">
-              <span>Emergency: +91 9876543210</span>
+              <span>Emergency: 08258 238104 to 238111(8 Lines)</span>
             </div>
           </div>
         </div>
@@ -50,27 +49,25 @@ const Navbar: React.FC = () => {
       <div className="w-full bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center py-4 sm:h-24">
-            
-            {/* Logo */}
-            <div className="flex justify-center sm:justify-start items-center mb-2 sm:mb-0">
+
+            {/* Logo + Title centered */}
+            <div className="flex-1 flex justify-center items-center space-x-4">
               <img
                 src={logo}
                 alt="Alva's Logo"
-                className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover"
+                className="h-12 w-12 sm:h-16 sm:w-16 squared-full object-cover"
               />
+              <div className="text-center">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 font-serif">
+                  Alva's Health Centre
+                </h1>
+                <p className="text-sm sm:text-base text-gray-600">
+                  Excellence in Healthcare Since 1985
+                </p>
+              </div>
             </div>
 
-            {/* Center Title */}
-            <div className="text-center">
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 font-serif">
-                Alva's Health Centre
-              </h1>
-              <p className="text-sm sm:text-base text-gray-600">
-                Excellence in Healthcare Since 1985
-              </p>
-            </div>
-
-            {/* Buttons */}
+            {/* Buttons aligned right */}
             <div className="flex flex-col sm:flex-row items-center mt-3 sm:mt-0 space-y-2 sm:space-y-0 sm:space-x-3">
               <a
                 href="#emergency"

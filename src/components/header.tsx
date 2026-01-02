@@ -32,7 +32,7 @@ const Header: React.FC = () => {
             { name: 'Dermatology', href: '/dermatology' },
             { name: 'Neurology', href: '/neurology' },
             { name: 'Psychiatry', href: '/psychitary' },
-            { name:'History Of Medicine', href:'/historyofmedicine'},
+            // { name:'History Of Medicine', href:'/historyofmedicine'},
           ],
         },
         {
@@ -45,6 +45,7 @@ const Header: React.FC = () => {
             { name: 'Obstetrics & Gynaecology', href: '/obstrics' },
             { name: 'Dental Surgery', href: '/dentalsurgery' },
             { name: 'Plastic Surgery', href: '/plasticsurgery'},
+            { name: 'ENT', href: '/ENT'},
           ],
         },
         {
@@ -92,9 +93,9 @@ const Header: React.FC = () => {
             { name: 'CAFETERIA', href: '/cafeteria' },
             { name: 'HOME VISIT', href: '/homevisit' },
             { name: 'HEALTH INSURANCES', href: '/healthinsurance' },
-            { name: 'AMBULANCE SERVICES', href: '/emergency' },
+            { name: 'AMBULANCE SERVICES', href: '/ambulanceservices' },
             { name: 'LABORATORY', href: '/laboratory' },
-            { name: 'ATM SERVICES', href: '/emergency' },
+            { name: 'ATM SERVICES', href: '/atmservices'},
           ],
         },
       ],

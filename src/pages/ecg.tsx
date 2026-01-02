@@ -13,7 +13,7 @@ const DiagnosticServices: React.FC = () => {
         <Activity className="mr-3" size={28} /> ECG / XRAY / CT SCAN Services
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10">
-        {[{ src: EcgImg, alt: 'ECG Machine' }, { src: XrayImg, alt: 'Digital X-Ray Facility' }, { src: CtScanImg, alt: 'CT Scan Equipment' }].map((img, i) => (
+        {[{ src: CtScanImg, alt: 'X-Ray' }, { src: XrayImg, alt: 'Digital X-Ray Facility' }, { src: EcgImg, alt: 'ECG' }].map((img, i) => (
           <figure key={i} className="rounded-xl overflow-hidden shadow-lg border border-slate-200">
             <img src={img.src} alt={img.alt} loading="lazy" className="w-full object-cover aspect-video" />
             <figcaption className="p-3 text-sm text-slate-600 text-center">{img.alt}</figcaption>

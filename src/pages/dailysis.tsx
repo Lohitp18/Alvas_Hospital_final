@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Replace with your dialysis image path
-import DialysisImage from '../images/dialysis.png';
+import DialysisImage from '../images/dialysis.jpeg';
 
 const Dialysis = () => {
   return (

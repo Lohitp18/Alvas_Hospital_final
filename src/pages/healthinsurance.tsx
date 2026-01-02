@@ -1,68 +1,71 @@
 import React from 'react';
 
-// Import insurance related images - update paths accordingly
-import InsuranceImg1 from '../images/insurance1.jpg';
-import InsuranceImg2 from '../images/insurance2.jpg';
-import InsuranceImg3 from '../images/insurance3.jpg';
+// Import insurance logos
+import Sampoornasuraksha from '../images/sampurna.jpg';
+import ESIC from '../images/esic.jpeg';
+import Yashaswini from '../images/yashaswini.jpeg';
+import AdityaBirla from '../images/aditya-birla.jpeg';
+import HDFC from '../images/hdfc.jpg';
+import SBI from '../images/sbi.jpeg';
+import Future from '../images/gci.jpg';
+import StarHealth from '../images/star-health.jpeg';
+import Bajaj from '../images/bajaj.jpeg';
+import ManipalCigna from '../images/manipal-cigna.jpeg';
+import Heritage from '../images/heritage.jpeg';
+import Reliance from '../images/reliance.jpg';
+import TataAIG from '../images/tata-aig.jpeg';
+import MRPL from '../images/mrpl.jpeg';
+import Ayushman from '../images/ayushman.jpeg';
+
 
 const HealthInsurances: React.FC = () => {
   const insurances = [
-    'SAMPOORNA SURAKSHA',
-    'ESIC',
-    'YASHASWINI INSURANCE',
-    'ADITYA BIRLA',
-    'HDFC',
-    'SBI GENERAL INSURANCE',
-    'FUTURE HEALTH INSURANCE',
-    'STAR HEALTH INSURANCE',
-    'BAJAJ ALLIANZ LIFE INSURANCE',
-    'MANIPAL CIGNA HEALTH INSURANCE',
-    'HERITAGE TPA',
-    'RELIANCE GENERAL INSURANCE',
-    'TATA AIG INSURANCE',
-    'MRPL',
-    'AYUSHMAN BHARATH INSURANCE',
-  ];
-
-  const images = [
-    { src: InsuranceImg1,},
-    { src: InsuranceImg2,  },
-    { src: InsuranceImg3,   },
+    { name: 'SAMPOORNA SURAKSHA', logo: Sampoornasuraksha },
+    { name: 'ESIC', logo: ESIC },
+    { name: 'YASHASWINI INSURANCE', logo: Yashaswini },
+    { name: 'ADITYA BIRLA', logo: AdityaBirla },
+    { name: 'HDFC', logo: HDFC },
+    { name: 'SBI GENERAL INSURANCE', logo: SBI },
+    { name: 'FUTURE HEALTH INSURANCE', logo: Future },
+    { name: 'STAR HEALTH INSURANCE', logo: StarHealth },
+    { name: 'BAJAJ ALLIANZ LIFE INSURANCE', logo: Bajaj },
+    { name: 'MANIPAL CIGNA HEALTH INSURANCE', logo: ManipalCigna },
+    { name: 'HERITAGE TPA', logo: Heritage },
+    { name: 'RELIANCE GENERAL INSURANCE', logo: Reliance },
+    { name: 'TATA AIG INSURANCE', logo: TataAIG },
+    { name: 'MRPL', logo: MRPL },
+    { name: 'AYUSHMAN BHARATH INSURANCE', logo: Ayushman },
   ];
 
   return (
-    <section className="max-w-5xl mx-auto my-16 p-6 bg-white rounded-lg shadow-md text-slate-800">
-      <h1 className="text-4xl font-bold text-teal-800 mb-8 text-center">HEALTH INSURANCES</h1>
-      
-      {/* Image Section */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 rounded-lg overflow-hidden shadow-lg border border-slate-200 max-w-4xl mx-auto">
-        {images.map(({ src, alt }, idx) => (
-          <figure key={idx} className="overflow-hidden rounded-lg">
+    <section className="max-w-6xl mx-auto my-16 p-6 bg-white rounded-lg shadow-md text-slate-800">
+      <h1 className="text-4xl font-bold text-teal-800 mb-8 text-center">
+        HEALTH INSURANCES
+      </h1>
+
+      <p className="mb-10 text-lg text-center">
+        Our hospital has tie-ups with the following health insurance providers:
+      </p>
+
+      {/* Insurance Cards */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {insurances.map((insurance, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50"
+          >
             <img
-              src={src}
-              alt={alt}
+              src={insurance.logo}
+              alt={insurance.name}
+              className="h-16 object-contain mb-4"
               loading="lazy"
-              className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
             />
-            <figcaption className="p-2 text-xs text-slate-600 text-center">{alt}</figcaption>
-          </figure>
+            <p className="text-sm font-semibold text-center text-slate-700">
+              {insurance.name}
+            </p>
+          </div>
         ))}
       </div>
-
-      <p className="mb-6 text-lg text-center font-semibold uppercase tracking-wide">
-        Our hospital has tie-up with various health insurances so as to ease the financial burden on our patients.
-      </p>
-
-      <p className="mb-8 text-lg text-center">
-        We offer the following insurances in our hospital:
-      </p>
-
-      <ol className="list-decimal list-inside space-y-2 text-lg text-slate-700 max-w-md mx-auto">
-        {insurances.map((insurance, index) => (
-          <li key={index}>{insurance}</li>
-        ))}
-      </ol>
-
     </section>
   );
 };

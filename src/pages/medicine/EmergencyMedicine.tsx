@@ -8,7 +8,8 @@ const GeneralMedicine = () => {
       <p className="text-gray-700 text-lg leading-relaxed">
      
 
-Our highly trained emergency medicine physicians, nurses, and trauma specialists are equipped to handle a wide range of medical emergencies, from heart attacks and strokes to severe injuries and accidents. With state-of-the-art facilities and a multidisciplinary approach, we prioritize patient safety and swift intervention to save lives and stabilize critical conditions. 
+      The Emergency Medicine department is dedicated to providing rapid and effective care for patients experiencing urgent or life-threatening medical conditions. Our team of emergency physicians is trained to handle a wide range of critical situations, from severe trauma and heart attacks to strokes and acute illnesses. Equipped with advanced diagnostic tools and treatment facilities, we prioritize quick assessment and intervention to stabilize patients and address their immediate health needs. Our goal is to deliver high-quality emergency care with efficiency and compassion, ensuring the best possible outcomes in critical situations.
+ 
 
       </p>
     </div>

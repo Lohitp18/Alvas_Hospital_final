@@ -2,9 +2,9 @@ import React from 'react';
 import { Baby, Heart, Stethoscope, Bed, Users } from 'lucide-react';
 
 // Import your images here for the combined section. Make sure the paths are correct.
-import nicu1 from '../images/nicu1.jpg'; // Placeholder
-import nicu2 from '../images/nicu2.jpg'; // Placeholder
-import nicu3 from '../images/nicu3.jpg'; // Placeholder
+import nicu1 from '../images/nicu1.jpeg'; // Placeholder
+import nicu2 from '../images/nicu2.jpeg'; // Placeholder
+import nicu3 from '../images/nicu3.jpeg'; // Placeholder
 
 const CriticalCare: React.FC = () => {
   return (

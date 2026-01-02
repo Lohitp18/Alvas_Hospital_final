@@ -1,96 +1,65 @@
 // src/pages/ENT.tsx
 import React from 'react';
+import sushan from "../../images/sushan.jpg";
+import shwetha from "../../images/dr shwetha.jpeg";
+import aishwarya from "../../images/dr aishwarya.jpeg";
 
 const ENT = () => {
   return (
-    <div className="p-8 max-w-5xl mx-auto bg-gray-50 rounded-lg shadow-md space-y-10 font-serif">
-      {/* Full-width heading */}
-      <h1 className="bg-blue-900 text-white text-4xl font-extrabold px-4 py-2 mb-6 block w-full">
-        OVERVIEW - ENT (Ear, Nose, Throat & Head & Neck Surgery)
+    <div className="p-6 max-w-5xl mx-auto">
+      {/* Main Heading */}
+      <h1 className="text-3xl font-bold text-blue-700 mb-4">
+        ENT (Ear, Nose, Throat & Head & Neck Surgery)
       </h1>
 
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <p className="text-gray-800 text-lg leading-relaxed tracking-wide">
-          The ENT Department specializes in comprehensive care for ear, nose, throat, head, and neck conditions. 
-          It provides medical, surgical, and diagnostic services for both adults and children, focusing on restoring 
-          hearing, improving breathing, managing voice disorders, and treating cancers and other complex conditions.
-        </p>
-      </section>
+      {/* Introduction Paragraph */}
+      <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
+        The ENT Department at Alva’s Health Centre focuses on diagnosing and treating a wide range of 
+        conditions related to the ear, nose, throat, head, and neck. Our skilled specialists provide 
+        comprehensive care for issues such as hearing loss, sinus problems, throat infections, voice 
+        disorders, and nasal conditions. Utilizing advanced diagnostic tools and treatments, including 
+        surgical interventions when necessary, we aim to relieve symptoms and improve patients’ quality 
+        of life. Whether addressing chronic conditions or acute concerns, the ENT team is dedicated to 
+        delivering effective and compassionate care.
+      </p>
 
-      {/* Ear */}
+      {/* Doctors Section */}
       <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">Ear (Otology & Neurotology)</h2>
-        <ul className="list-disc list-inside ml-6 space-y-2 text-gray-700 leading-relaxed tracking-wide">
-          <li>Hearing assessment & audiology services</li>
-          <li>Treatment of ear infections (acute & chronic otitis media/externa)</li>
-          <li>Ear microsuction & wax removal</li>
-          <li>Balance & dizziness evaluation (vertigo, Meniere’s disease)</li>
-          <li>Tinnitus management</li>
-          <li>Hearing aids & cochlear implants</li>
-          <li>Surgery: Tympanoplasty, mastoidectomy, stapedectomy</li>
-        </ul>
-      </section>
+        <h2 className="text-3xl font-semibold text-blue-600 mb-5 border-b border-blue-200 pb-2 text-center">
+          Our Doctors
+        </h2>
 
-      {/* Nose & Sinuses */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">Nose & Sinuses (Rhinology)</h2>
-        <ul className="list-disc list-inside ml-6 space-y-2 text-gray-700 leading-relaxed tracking-wide">
-          <li>Diagnosis & treatment of sinusitis (acute & chronic)</li>
-          <li>Nasal obstruction & deviated septum correction (septoplasty)</li>
-          <li>Allergy testing & management</li>
-          <li>Nasal polyps & endoscopic sinus surgery (FESS)</li>
-          <li>Treatment of nosebleeds (epistaxis)</li>
-          <li>Cosmetic & functional rhinoplasty</li>
-        </ul>
-      </section>
+        <div className="flex justify-center gap-6 items-center flex-wrap">
+          {/* Doctor 1 */}
+          <div className="text-center bg-white p-4 rounded-lg shadow-md w-60">
+            <img
+              src={sushan} 
+              alt="Dr. Sushan Shetty - ENT Specialist"
+              className="mx-auto w-40 h-40 rounded-full object-cover"
+            />
+            <h3 className="text-xl font-bold text-blue-800 mt-4">Dr. Sushan Shetty</h3>
+          </div>
 
-      {/* Throat & Voice */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">Throat & Voice (Laryngology)</h2>
-        <ul className="list-disc list-inside ml-6 space-y-2 text-gray-700 leading-relaxed tracking-wide">
-          <li>Voice disorder evaluation & therapy</li>
-          <li>Swallowing disorder (dysphagia) assessment & treatment</li>
-          <li>Sleep apnea & snoring management (including surgery)</li>
-          <li>Tonsillectomy & adenoidectomy</li>
-          <li>Microlaryngeal surgery for vocal cord lesions</li>
-          <li>Laryngeal cancer diagnosis & surgery</li>
-        </ul>
-      </section>
+          {/* Doctor 2 */}
+          <div className="text-center bg-white p-4 rounded-lg shadow-md w-60">
+            <img
+              src={shwetha} 
+              alt="Dr. Shwetha C Poojary - ENT Specialist"
+              className="mx-auto w-40 h-40 rounded-full object-cover"
+            />
+            <h3 className="text-xl font-bold text-blue-800 mt-4">Dr. Shwetha C Poojary</h3>
+          </div>
 
-      {/* Head & Neck Surgery */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">Head & Neck Surgery</h2>
-        <ul className="list-disc list-inside ml-6 space-y-2 text-gray-700 leading-relaxed tracking-wide">
-          <li>Thyroid & parathyroid surgery</li>
-          <li>Salivary gland surgery (parotid, submandibular)</li>
-          <li>Neck masses & cysts removal</li>
-          <li>Head & neck cancer screening, biopsy & surgery</li>
-          <li>Reconstructive head & neck surgery</li>
-        </ul>
-      </section>
-
-      {/* Pediatric ENT */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">Pediatric ENT</h2>
-        <ul className="list-disc list-inside ml-6 space-y-2 text-gray-700 leading-relaxed tracking-wide">
-          <li>Ear infections & hearing loss in children</li>
-          <li>Tonsil & adenoid problems</li>
-          <li>Airway disorders in children</li>
-          <li>Congenital neck masses & anomalies</li>
-          <li>Pediatric sleep apnea evaluation</li>
-        </ul>
-      </section>
-
-      {/* Diagnostic & Support Services */}
-      <section className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-3xl font-semibold text-blue-600 mb-4 border-b border-blue-200 pb-2">Diagnostic & Support Services</h2>
-        <ul className="list-disc list-inside ml-6 space-y-2 text-gray-700 leading-relaxed tracking-wide">
-          <li>Audiometry & tympanometry</li>
-          <li>Endoscopy of ear, nose, throat</li>
-          <li>Allergy testing</li>
-          <li>Voice & speech therapy</li>
-          <li>Imaging support (CT, MRI for ENT conditions)</li>
-        </ul>
+          {/* Doctor 3 */}
+          <div className="text-center bg-white p-4 rounded-lg shadow-md w-60">
+            <img
+              src={aishwarya} 
+              alt="Dr. Aishwarya Ramakrishnan - ENT Specialist"
+              className="mx-auto w-40 h-40 rounded-full object-cover"
+            />
+            <h3 className="text-xl font-bold text-blue-800 mt-4">Dr. Aishwarya Ramakrishnan</h3>
+          </div>
+        </div>
       </section>
     </div>
   );

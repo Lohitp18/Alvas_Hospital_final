@@ -53,7 +53,9 @@ const About = () => {
               <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-400">Our Vision</h3>
             </div>
             <p className="text-gray-700 dark:text-gray-300">
-              To deliver the safest and highest quality of care to the patient.
+            At Alva's Health , we aim to raise the benchmark for healthcare in India . By integrating cutting-edge
+technologies with compassionate care, we are dedicated to setting new standards of excellence in the
+medical field.
             </p>
           </div>
         </div>

@@ -3,13 +3,12 @@ import React from 'react';
 // Import endoscopy-related images (update the path according to your folder structure)
 import EndoscopyImg1 from '../images/endoscopy1.png';
 import EndoscopyImg2 from '../images/endoscopy2.jpg';
-import EndoscopyImg3 from '../images/endoscopy3.jpg';
+
 
 const EndoscopyServices: React.FC = () => {
   const images = [
     { src: EndoscopyImg1, },
     { src: EndoscopyImg2, },
-    { src: EndoscopyImg3,  },
   ];
 
   return (
