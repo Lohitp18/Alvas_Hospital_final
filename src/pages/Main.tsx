@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Shield, Users, Award, Clock, MapPin, Phone, Star, CheckCircle, TrendingUp, Stethoscope, Brain, Eye, ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
+import { Award, ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
 import img1 from "../images/40 YEARS_20250806_093912_0000.png";
 import about from "../images/about.png"
 import chairman from "../images/chairman.webp"
