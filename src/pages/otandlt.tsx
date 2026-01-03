@@ -2,7 +2,7 @@ import React from 'react';
 import { ScissorsSquare, Baby, Syringe } from 'lucide-react';
 
 // Image imports (ensure file names & paths are correct)
-import ot1 from '../images/OT1.jpg';
+import ot1 from '../images/Ot1.jpg'
 import ot2 from '../images/Ot2.jpg';
 import lt1 from '../images/Ot3.jpg';
 
