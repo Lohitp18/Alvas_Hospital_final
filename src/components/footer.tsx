@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube, Award, Shield, Heart } from 'lucide-react';
-import logo from "../images/logo.png"
+//import logo from "../images/logo.png"
+import logo1 from "../images/logo1.jpg";
 
 const Footer = () => {
   return (
@@ -26,7 +27,7 @@ const Footer = () => {
         <Phone size={28} />
         <div>
           <p className="font-semibold text-lg">Have a question? Call us now</p>
-          <p className="text-blue-100 text-sm">+91 824 423 8855</p>
+          <p className="text-blue-100 text-sm">08258 238104 to 238111(8 Lines)</p>
         </div>
       </div>
     </div>
@@ -37,7 +38,7 @@ const Footer = () => {
         <Mail size={28} />
         <div>
           <p className="font-semibold text-lg">Feel free to message us!</p>
-          <p className="text-blue-200 text-sm">hospital@yenepoya.org</p>
+          <p className="text-blue-200 text-sm">ahc@alvas.org</p>
         </div>
       </div>
     </div>
@@ -58,9 +59,9 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <img
-                  src={logo}
+                  src={logo1}
                   alt="Alvas Logo"
-                  className="h-12 w-12 rounded-full object-cover"
+                  className="h-12 w-12 squared-full object-cover"
                 />
                 <div>
                   <h3 className="text-2xl font-bold text-white">Alva's Health Centre</h3>

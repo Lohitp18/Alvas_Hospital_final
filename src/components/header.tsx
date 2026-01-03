@@ -53,7 +53,7 @@ const Header: React.FC = () => {
           links: [
             { name: 'Oncology & Oncosurgery', href: '/oncology' },
             { name: 'Nephrology and Urology', href: '/nephrologyurology' },
-            { name: 'Emergency Medicine and Trauma Care', href: '/emergencymedicine' },
+            // { name: 'Emergency Medicine and Trauma Care', href: '/emergencymedicine' },
             { name: 'Radiology', href: '/radio' },
             { name: 'Pain Management & Palliative Care', href: '/pain' },
             { name: 'Pulmonology', href: '/pulmonology'},
